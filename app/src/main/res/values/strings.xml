@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Idiot</string>
+    <string name="Titulo">Titulo</string>
+    <string name="ano">Ano</string>
+    <string name="genero">Genero</string>
+    <string name="Duracao">Duração</string>
+</resources>
