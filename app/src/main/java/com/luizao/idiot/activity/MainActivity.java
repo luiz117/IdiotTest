@@ -1,13 +1,13 @@
 package com.luizao.idiot.activity;
 
-import androidx.annotation.NonNull;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.view.MotionEvent;
+
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.LinearLayout;
@@ -48,12 +48,14 @@ public class MainActivity extends AppCompatActivity {
                 new RecyclerItemClickListener.OnItemClickListener() {
                     @Override
                     public void onItemClick(View view, int position) {
-                        Toast.makeText(getApplicationContext(),"", Toast.LENGTH_LONG).show();
+                        Filme filme = movies.get(position);
+                        Toast.makeText(getApplicationContext(),"Título " + filme.getTitulo(), Toast.LENGTH_LONG).show();
                     }
 
                     @Override
                     public void onLongItemClick(View view, int position) {
-                        Toast.makeText(getApplicationContext(),"", Toast.LENGTH_LONG).show();
+                        Filme filme = movies.get(position);
+                        Toast.makeText(getApplicationContext(), filme.getDuracao(), Toast.LENGTH_LONG).show();
 
                     }
 
@@ -68,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void addMovies(){
         String titulo = "TITULO ";
-        String genero[] = {"Ação", "Comédia"};
+        String[] genero = {"Ação", "Comédia"};
         Integer ano = 2000;
         Integer duracao = 70;
 
